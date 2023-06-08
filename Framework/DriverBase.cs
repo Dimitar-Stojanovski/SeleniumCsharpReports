@@ -34,5 +34,12 @@ namespace SeleniumCsharpReports.Framework
             
             
         }
+        
+        public string GetScreenshot()
+        {
+            var file= ((ITakeScreenshot)driver).GetScreenshot();
+            var img = file.AsBase64EncodedString;
+            return img;
+        } 
     }
 }
