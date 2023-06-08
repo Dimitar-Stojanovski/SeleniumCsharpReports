@@ -42,7 +42,7 @@ namespace SeleniumCsharpReports.Tests
         [TearDown]
         public void TearDown()
         {
-            ExtentReporting.EndReporting();
+            ExtentReporting.EndReporting("Ending test", browser.GetScreenShot());
             driver.Quit();
            
         }
